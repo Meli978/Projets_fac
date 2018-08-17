@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39|Roboto:400,500,700,300');
+
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+/************************************************************************************************/
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?6422423');
+  src: url('font/fontello.eot?6422423#iefix') format('embedded-opentype'),
+       url('font/fontello.woff2?6422423') format('woff2'),
+       url('font/fontello.woff?6422423') format('woff'),
+       url('font/fontello.ttf?6422423') format('truetype'),
+       url('font/fontello.svg?6422423#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?6422423#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-pencil:before { content: '\e800'; }
+
+
+
+article {
+  width: 272mm;
+  height: calc(210mm - 25.5mm);
+  font-size: 1.6rem;
+  position: relative;
+  background: #fff;
+}
+
+article header {
+  display: flex;
+  align-items: center;
+  height: 25mm;
+  padding: 0 5mm;
+  background: #eee;
+}
+
+article header .forwarder-icon {
+  display: block;
+  flex: none;
+  position: relative;
+  width: 18mm;
+  height: 18mm;
+  margin-right: 5mm;
+  background: #fff;
+  border-radius: 20mm;
+  border: 1px solid #bbb;
+}
+article header .forwarder-icon svg {
+
+  left: 1px;
+  width: 100%;
+  height: 100%;
+  /* padding: 2.5mm; */
+  fill: #444;
+}
+
+article header span {
+  display: block;
+  font-family: Roboto Condensed;
+  /* font-size: 3rem; */
+  font-weight: 400;
+  /* margin-left: 5mm; */
+  /* writing-mode: vertical-lr; */
+  text-align: center;
+  /* transform: rotate(180deg); */
+  line-height: 1;
+  flex: none;
+  /* width: 1em; */
+}
+article header h1 {
+  flex: 1;
+  font-family: Roboto Condensed;
+}
+article header h1 p {
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0mm;
+}
+
+article header h1 small {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+article section {
+  position: relative;
+  padding: 0 5mm;
+  counter-reset: quantity;
+  padding-bottom: 6mm; /* This ensures min-height: 42mm with a single row */
+}
+
+article section:after {
+  display: inline-block;
+  font-family: roboto condensed;
+  /*content: counter(quantity) " item(s) in total";*/
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 12mm;
+}
+article section p {
+  display: flex;
+  height: 18mm;
+  line-height: 10mm;
+  justify-content: space-between;
+  align-items: center;
+}
+article section p span {
+  font-family: Roboto Condensed;
+  font-size: 2.0rem;
+  position: relative;
+}
+article section p span:before {
+  content: '\f363';
+  font-family: Ionicons;
+  font-size: 2.4rem;
+  position: absolute;
+  margin-left: calc(-5mm + 2px);
+}
+
+article section .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 75mm);
+  grid-template-rows: repeat(auto-fill, 6mm);
+  grid-auto-flow: column;
+  justify-content: space-between;
+  width: 100%;
+}
+article section .grid ul {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 6mm;
+}
+
+.grid li {
+  display: block;
+  list-style: none;
+  white-space: nowrap;
+  width: 35mm;
+}
+.grid ul li:last-child {
+  width: 10mm;
+  text-align: right;
+}
+.grid li i {
+  float: left;
+  font-style: normal;
+  white-space: nowrap;
+  margin-left: 0.5mm;
+}
+.grid li i:first-child {
+  margin-left: 0;
+}
+.grid li i:last-child {
+  font-weight: 700;
+}
+article .alert, article footer  {
+  position: absolute;
+  bottom: 0;
+  padding: 0 5mm;
+  width: 100%;
+}
+article .alert {
+  display: flex;
+  align-items: center;
+  height: 18mm;
+  background: #eee;
+  display: none;
+}
+article .alert.visible {
+  display: flex;
+}
+article .alert.visible + footer {
+  margin-bottom: 18mm;
+}
+article .alert i {
+  font-size: 3rem;
+  margin-right: 5mm;
+}
+article .alert p {
+  line-height: 5mm;
+  font-size: 1.4rem;
+}
+article footer {
+  font-family: Roboto Condensed;
+  border-top: 1px solid #eee;
+}
+article footer ul {
+  height: 10mm;
+  display: flex;
+  align-items: center;
+}
+article footer li {
+  list-style: none;
+  margin-right: 2.5mm;
+}
+article footer li:nth-last-child(n + 2):after {
+  content: "";
+  display: inline-block;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%220%200%20512%20512%22%20fill%3D%22rgb(160%2C160%2C160)%22%20stroke%3D%22rgb(80%2C80%2C80)%22%3E%3Cpath%20d%3D%22M296%20136c0-22.002-17.998-40-40-40s-40%2017.998-40%2040%2017.998%2040%2040%2040%2040-17.998%2040-40zm0%20240c0-22.002-17.998-40-40-40s-40%2017.998-40%2040%2017.998%2040%2040%2040%2040-17.998%2040-40zm0-120c0-22.002-17.998-40-40-40s-40%2017.998-40%2040%2017.998%2040%2040%2040%2040-17.998%2040-40z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+  margin-left: 2mm;
+  margin-top: -2px;
+}
+article footer li span + span:before {
+  content: " / "
+}
+
+article + article {
+  page-break-before: always;
+}
+
+
+@media print{
+  @page {
+    size: A4 landscape;
+    orientation: landscape;
+    margin: 0;
+  }
+  /* body {
+    margin: 0;
+  } */
+  article {
+    margin: 12.5mm;
+  }
+}
+@media screen {
+  /* body {
+    margin: 25mm 0 12.5mm 25mm;
+    background: #25b580;
+    counter-reset: page;
+  } */
+  article {
+    z-index: 1;
+    width: 297mm;
+    height: 210mm;
+    border: 12.5mm solid #fff;
+    margin: 12.5mm auto;
+    box-shadow: 0 0 7.5mm rgba(0,0,0,0.25);
+
+  }
+  article:before {
+
+    display: block;
+    position: absolute;
+    left: -37.5mm;
+    height: 25mm;
+    line-height: 25mm;
+    text-align: center;
+    width: 25mm;
+    font-size: 18mm;
+    color: rgba(255,255,255,0.3);
+    font-weight: 300;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+  }
+  .print {
+    display: block;
+    position: fixed;
+    width: 25mm;
+    height: 25mm;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    padding: 0 6.25mm;
+    padding-bottom: 14.5mm;
+    background: #25b580;
+  }
+  .print svg, .print:before {
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .print:before {
+    content: '';
+    z-index: 1;
+    display: block;
+    position: absolute;
+    left: 5.25mm;
+    width: 12.5mm;
+    height: 12.5mm;
+    bottom: 12.5mm;
+    border-radius: 50%;
+    border: 1mm solid #fff;
+  }
+  .print:after {
+    content: " " counter(page) " page(s) available";
+    font-family: Roboto Condensed;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    position: absolute;
+    bottom: 24mm;
+    padding-top: 10mm;
+    right: 1px;
+    width: 25mm;
+    line-height: 25mm;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    pointer-events: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#25b580+0,25b580+100&0+0,1+100 */
+background: -moz-linear-gradient(bottom,  rgba(37,181,128,0) 0%, rgba(37,181,128,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(bottom,  rgba(37,181,128,0) 0%,rgba(37,181,128,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to top,  rgba(37,181,128,0) 0%,rgba(37,181,128,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0025b580', endColorstr='#25b580',GradientType=1 ); /* IE6-9 */
+
+
+  }
+}
+@media screen and (min-width: 322mm) {
+  .print {
+    left: 50%;
+    margin-left: -161.5mm;
+  }
+  .print:after {
+    right: -1px;
+  }
+}
+
+#imprimer{
+  margin-left: 8px;
+}
+
+
+/*********************************partie tableau*****************************/
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*********************css bouton ************************/
+
+.topcoat-button-bar__item > input {
+  border: 0;
+	clip: rect(0 0 0 0);
+	height: 2rem;
+	margin: 0 -2rem -2rem 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: auto;
+  opacity: 0.001;
+}
+
+.button-bar,
+.topcoat-button-bar {
+  display: table;
+  table-layout: fixed;
+  white-space: no-wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.topcoat-button-bar__item {
+  display: table-cell;
+  width: auto;
+  border-radius: 0;
+}
+
+.topcoat-button-bar > .topcoat-button-bar__item:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.topcoat-button-bar > .topcoat-button-bar__item:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/*.topcoat-button-bar__item:first-child > .topcoat-button-bar__button {
+  border-right: none;
+}*/
+
+.topcoat-button-bar__item:last-child > .topcoat-button-bar__button {
+  border-left: none;
+}
+
+.button,
+.topcoat-button-bar__button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  background-clip: padding-box;
+  color: inherit;
+  vertical-align: top;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: inherit;
+  cursor: default;
+  user-select: none;
+}
+
+.topcoat-button-bar__button {
+  padding: 0 1.25rem;
+  border: 1px solid #a5a8a8;
+  /* Important inheritance to manipulate border radius from parent */
+  border-radius: inherit;
+  background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  line-height: 3rem;
+}
+
+:checked + .topcoat-button-bar__button,
+.topcoat-button-bar__button:active,
+.topcoat-button-bar__button.is-active {
+  background-color: #d3d7d7;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+}
+
+.topcoat-button-bar__item:disabled,
+.topcoat-button-bar__item.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.topcoat-button-bar__button:focus {
+  border: 1px solid #0940fd;
+  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
+  box-shadow: 0 0 0 2px #6fb5f1;
+  z-index: 1;
+}
+
+
+/*****************************css barre de recherche **************************************/
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/**************bouton ajouter produit ******************/
+
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
+
+/****************************************bouton + search**************/
+.bouton_search{
+  display: flex;
+  flex-direction: row-reverse;
+  align-item: baseline;
+  justify-content:space-between;
+
+}
+
+div#edit {
+    /* width: 100%; */
+    /* height: 89%; */
+    text-align: center;
+    margin: 15px;
+}
