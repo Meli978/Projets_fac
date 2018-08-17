@@ -1,0 +1,781 @@
+
+/* pour les resolution decrans
+           -laptop L 1440px
+           -laptop 1024px
+*/
+
+/* Styles gÃ©nÃ©raux */
+
+body {
+  padding-top: 50px;
+  padding-bottom: 150px;
+     background: linear-gradient(transparent, rgba(110, 110, 110, 0.45)), linear-gradient(100deg, rgba(14, 80, 74, 0.48) 30%, rgba(147, 186, 117, 0.79) 120%);
+    background-repeat: no-repeat;
+/**  overflow: hidden;*/
+}
+
+p.error {
+    color: #e23838;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+input#prenom {
+  width: 37%;
+margin-right: 12%;
+}
+input#nom {
+  width: 35%;
+    margin-left: 12%;
+}
+option {
+    color: #31586f;
+}
+/*mise en page du contenaire*/
+#contenaire{
+  position: relative;
+  width: 912px;
+  height: 570px;
+  display: block;
+  margin: auto;
+  background: #F3F6F8;
+  z-index: 3;
+      top: 0px;
+}
+
+#pgauche {
+  width: 44%;
+  display: block;
+  margin: auto;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+   background: linear-gradient(rgb(151, 177, 145), rgba(204, 204, 168, 0.68), rgb(131, 154, 152)), url(https://images.pexels.com/photos/1852/dawn-landscape-mountains-nature.jpg?h=350&auto=compress);
+    background-size: cover;
+    border-radius: 0%;
+    z-index: 1;
+}
+/*mise en page du contenaire de  limage haut de la partie gauche*/
+
+#contenaireimg {
+  border-radius: 50%;
+  width: 60%;
+  height: 40%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 8%;
+  right: 20%;
+}
+/*mise en page de limage de la partie gauche*/
+.imggauche {
+  position: absolute;
+  display: block;
+  top: 38%;
+  left: 25%;
+  margin: auto;
+  width: 50%;
+  height: 60%;
+  z-index: 1;
+}
+/*mise en page du welcome*/
+
+#titrewelcome {
+  position: absolute;
+  left: 14%;
+  bottom: 37%;
+  color: white;
+  font-family: "lato";
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  z-index: 3;
+}
+/*mise en page de lautre text*/
+#autretext {
+  position: absolute;
+  left: 11%;
+  bottom: 27%;
+  color: white;
+  font-family: "lato";
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+/*fin mise en page de la partie gauche*/
+/*===========================DROITE===============================
+/*mise en page de la partie droite*/
+#pdroite {
+  width: 56%;
+  display: block;
+  margin: auto;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+
+}
+/*mise en page du contenaire des elements de la partie droite*/
+#containerelmpartiedroite {
+  margin-top: 15%;
+}
+#containerelmpartiedroitesignup{
+  margin-top: -10px;
+}
+/*text signup*/
+.signup {
+  color: #838fa6;
+  font-family: "lato";
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 3;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+}
+/*mise en page du formulaire*/
+form {
+  padding: 2px 0;
+  position: relative;
+}
+/*mise en page des inputs*/
+select#dm{
+    width: 79%;
+    margin-right: 54px;
+    margin-left: 53px;
+    color: #838383;
+
+}
+.optin {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 73%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 18px;
+  color: #333333;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  font-weight: 300;
+    flex-basis: 36%;
+    
+}
+
+.messagederrure {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+    border: 1px solid rgba(222, 46, 46, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 75%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 18px;
+    color: #d44d4d;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+.optin:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.optin:focus {
+  background-color: white;
+  width: 90%;
+  color: #CD98E3;
+}
+/* terme et condition*/
+#termeetcondtion {
+  display: block;
+  margin: auto;
+  color:#2c6c7d;
+  font-family: "lato";
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+/* terme et condition cliquable*/
+#termclique {
+  cursor: pointer;
+  color: #FBADC1;
+}
+/***/
+
+
+#twitter {
+  padding-left: 10px;
+  color: #ffffff;
+}
+.liendeconnexion{
+    text-align: center;
+    font-family: "lato";
+    font-size: 20px;
+    font-weight: 800;
+    color: #7e8ba3;
+        margin-top: 20px;
+}
+
+.connexion{
+    color: #7e8ba3;
+    font-size: 1em;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display:inline-block;
+}
+.connexion:hover{
+
+  font-size: large;
+  }
+
+
+/*mise en forme du hide password de la page de connexion*/
+.hide-password-login{
+    /* display: inline-block; */
+       
+    position: absolute;
+    right: 71px;
+    top: 36%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #7f8ba3;
+    text-decoration: none;
+}
+/*mise en forme du hide password de condfirmation mot de passe*/
+.hide-password-con{
+
+  position: absolute;
+     right: 60px;
+    top: 49%;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #7f8ba3;
+  text-decoration: none;
+      font-family: cursive;
+}
+/*****erreu mot de passe ou utilisateur*/
+p.erreur {
+    text-align: center;
+    color: red;
+}
+/************LES ANIMATION DE LA PAGE*/
+         /*animation du  contenaire de gauche a droite*/
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  /*animation de la partie gauche de bas en haut*/
+  .bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  }
+  75% {
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+  }
+  90% {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  }
+  100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  }
+  @keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  }
+  75% {
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+  }
+  90% {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  }
+  100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  }
+/*animation de la partie droite*/
+.bounceInDown {
+ -webkit-animation-name: bounceInDown;
+ animation-name: bounceInDown;
+ -webkit-animation-duration: 1s;
+ animation-duration: 1s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ }
+ @-webkit-keyframes bounceInDown {
+ 0%, 60%, 75%, 90%, 100% {
+ -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ }
+
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -3000px, 0);
+ transform: translate3d(0, -3000px, 0);
+ }
+
+ 60% {
+ opacity: 1;
+ -webkit-transform: translate3d(0, 25px, 0);
+ transform: translate3d(0, 25px, 0);
+ }
+
+ 75% {
+ -webkit-transform: translate3d(0, -10px, 0);
+ transform: translate3d(0, -10px, 0);
+ }
+
+ 90% {
+ -webkit-transform: translate3d(0, 5px, 0);
+ transform: translate3d(0, 5px, 0);
+ }
+
+ 100% {
+ -webkit-transform: none;
+ transform: none;
+ }
+ }
+
+ @keyframes bounceInDown {
+ 0%, 60%, 75%, 90%, 100% {
+ -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ }
+
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -3000px, 0);
+ transform: translate3d(0, -3000px, 0);
+ }
+
+ 60% {
+ opacity: 1;
+ -webkit-transform: translate3d(0, 25px, 0);
+ transform: translate3d(0, 25px, 0);
+ }
+
+ 75% {
+ -webkit-transform: translate3d(0, -10px, 0);
+ transform: translate3d(0, -10px, 0);
+ }
+
+ 90% {
+ -webkit-transform: translate3d(0, 5px, 0);
+ transform: translate3d(0, 5px, 0);
+ }
+
+ 100% {
+ -webkit-transform: none;
+ transform: none;
+ }
+ }
+
+
+
+
+#twitter {
+  padding-left: 10px;
+  color: #ffffff;
+}
+.liendeconnexion{
+    text-align: center;
+    font-family: "lato";
+    font-size: 20px;
+    font-weight: 800;
+    color: #7e8ba3;
+}
+
+.connexion{
+    color: #7e8ba3;
+}
+#t { /*************************************/
+   
+  
+    margin-top: 2rem;
+    color: #fff;
+    margin-bottom: 0rem;
+    margin-left: 25%;
+    width: 50%;
+    padding: .5rem 1rem;
+    border: 1px solid #f3f6f8;
+    border-radius: 999px;
+      background-color:  rgba(171, 178, 159, 0.81);
+    text-align: center;
+    font-size: large;
+    height: 50px;
+}
+/*mise en forme du hide password de la page dinscription*/
+.hide-password {
+    /* display: inline-block; */
+    position: absolute;
+    right: 59px;
+    top: 59%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #7f8ba3;
+    text-decoration: none;
+    font-family: cursive;
+}
+/*mise en forme du hide password de la page de connexion*/
+
+/*mise en forme du hide password de condfirmation mot de passe*/
+
+/************LES ANIMATION DE LA PAGE*/
+         /*animation du  contenaire de gauche a droite*/
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  /*animation de la partie gauche de bas en haut*/
+  .bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  }
+  75% {
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+  }
+  90% {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  }
+  100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  }
+  @keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  }
+  75% {
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+  }
+  90% {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  }
+  100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  }
+/*animation de la partie droite*/
+.bounceInDown {
+ -webkit-animation-name: bounceInDown;
+ animation-name: bounceInDown;
+ -webkit-animation-duration: 1s;
+ animation-duration: 1s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ }
+ @-webkit-keyframes bounceInDown {
+ 0%, 60%, 75%, 90%, 100% {
+ -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ }
+
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -3000px, 0);
+ transform: translate3d(0, -3000px, 0);
+ }
+
+ 60% {
+ opacity: 1;
+ -webkit-transform: translate3d(0, 25px, 0);
+ transform: translate3d(0, 25px, 0);
+ }
+
+ 75% {
+ -webkit-transform: translate3d(0, -10px, 0);
+ transform: translate3d(0, -10px, 0);
+ }
+
+ 90% {
+ -webkit-transform: translate3d(0, 5px, 0);
+ transform: translate3d(0, 5px, 0);
+ }
+
+ 100% {
+ -webkit-transform: none;
+ transform: none;
+ }
+ }
+
+ @keyframes bounceInDown {
+ 0%, 60%, 75%, 90%, 100% {
+ -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+ }
+
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -3000px, 0);
+ transform: translate3d(0, -3000px, 0);
+ }
+
+ 60% {
+ opacity: 1;
+ -webkit-transform: translate3d(0, 25px, 0);
+ transform: translate3d(0, 25px, 0);
+ }
+
+ 75% {
+ -webkit-transform: translate3d(0, -10px, 0);
+ transform: translate3d(0, -10px, 0);
+ }
+
+ 90% {
+ -webkit-transform: translate3d(0, 5px, 0);
+ transform: translate3d(0, 5px, 0);
+ }
+
+ 100% {
+ -webkit-transform: none;
+ transform: none;
+ }
+ }
+ /**********fin des animations***********/
+/*********les controles formulaires******/
+#email:required ,#password:required ,#nom:required ,#passwordCon:required ,#pseudo:required{
+    color: #31586f;
+}
+#email:valid ,#name:valid ,#prenom:valid{
+    color: green;
+    border-color: green;
+    background: url(jj.png) right no-repeat;
+    background-position: 95%
+}
+#pseudo:valid ,#dm:valid{
+    border-color: green;
+    background: url(jj.png) right no-repeat;
+    background-position: 95%
+}
+#password:valid ,#passwordCon:valid{
+  color: green;
+  border-color: green;
+  background: url(jj.png) right no-repeat;
+  background-position: 97%
+}
+/****************************************/
+/***********fin controles formulaire*******/
+/**********termes et conditions***********/
+.buttton {
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display:inline-block;
+}
+.buttton:hover{
+  color: #39bc9f;
+  font-size: large;
+  }
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 5px;
+  width: 64%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  height: 60%;
+}
+
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 85%;
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+/**********fin termes et conditions******/
